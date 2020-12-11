@@ -1,11 +1,12 @@
-import React from 'react'
-import logo from '../images/logo.png';
-import logoSvg from '../images/rysunek_v3.svg';
+import React, {useState} from 'react'
 import {BsPersonFill} from 'react-icons/bs';
 import {AiOutlineHeart} from 'react-icons/ai';
 import {GiHamburgerMenu} from 'react-icons/gi';
+import Sidebar from './Sidebar';
 
 function Nav() {
+
+    const [sidebarIsOpen,setSidebarIsOpen] = useState(false);
     return (
         <div className="nav">
             <div className="nav__container">
@@ -24,9 +25,10 @@ function Nav() {
                 </div>
             </div>
             <div className="nav__hamburger">
-                <GiHamburgerMenu className="nav__burger"/>
+                <GiHamburgerMenu className="nav__burger" onClick={()=>setSidebarIsOpen(true)}/>
             </div>
             </div>
+            <Sidebar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>
         </div>
     )
 }
