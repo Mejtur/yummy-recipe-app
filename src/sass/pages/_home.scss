@@ -10,7 +10,6 @@
     background-image: url(../../images/food.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
     height: 80vh;
     flex: 0.45;
     z-index: 3;
@@ -31,10 +30,9 @@
   &__columnRight {
     flex: 0.5;
     font-family: $mainFont;
-    z-index: 5;
   }
   &__textContainer {
-    padding-top: 150px;
+    margin-top: 150px;
     padding-left: 100px;
   }
 
@@ -69,7 +67,7 @@
   .home {
     &__textContainer {
       padding-left: 40px;
-      padding-top: 100px;
+      margin-top: 100px;
     }
 
     &__title {
@@ -92,7 +90,6 @@
 
     &__colLeft {
       display: block;
-      width: 100%;
       height: 100%;
     }
 
@@ -100,8 +97,11 @@
       display: none;
     }
     &__textContainer {
-      margin-top: 20px;
+      padding-top: 20px;
       padding-left: 39px;
+    }
+    &__columnRight {
+      z-index: 5;
     }
   }
 }
